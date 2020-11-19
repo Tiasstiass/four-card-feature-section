@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: hsl(0, 0%, 98%);
+  margin: 5em 2em;
+  text-align: center;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 1.5rem;
+  font-weight: 200;
+  color: hsl(234, 12%, 34%);
+}
+
+span {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.intro {
+  margin: 1em auto auto auto;
+  font-size: 0.9375rem;
+  color: hsl(229, 6%, 66%);
+  max-width: 55ch;
+}
+
+.bottom-boxes {
+  margin-top: 5em;
+}
+
+.section-box {
+  background-color: hsl(0, 0%, 100%);
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px 1px rgba(1, 73, 121, 0.158);
+  text-align: left;
+  padding: 1.6em;
+  overflow: auto;
+  margin-top: 1.5625em;
+}
+
+.box-cyan {
+  border-top: 4px solid hsl(180, 62%, 55%);
+}
+
+.box-red {
+  border-top: 4px solid hsl(0, 78%, 62%);
+}
+
+.box-orange {
+  border-top: 4px solid hsl(34, 97%, 64%);
+}
+
+.box-blue {
+  border-top: 4px solid hsl(212, 86%, 64%);
+}
+
+h2 {
+  font-size: 1.25rem;
+  color: hsl(234, 12%, 34%);
+}
+
+.section-box p {
+  font-size: 0.8125rem;
+  color: hsl(229, 6%, 66%);
+  margin-top: 0.3em;
+}
+
+img {
+  float: right;
+  margin-top: 2.375em;
+}
+
+@media screen and (min-width: 768px) {
+  body {
+    margin: 2em auto;
+  }
+
+  h1,
+  span {
+    font-size: 2.2rem;
+  }
+
+  .bottom-boxes {
+    display: grid;
+    grid-template-columns: 45% 45%;
+    column-gap: 1.5em;
+    margin-top: 1em;
+    justify-content: center;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  body {
+    margin: 2em 10.125em;
+  }
+
+  .bottom-boxes {
+    height: 0;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+  }
+
+  .section-box {
+    height: 15.625em;
+    width: 21.875em;
+    justify-self: center;
+  }
+
+  .box-cyan {
+    grid-row: 1 / 3;
+    place-self: center;
+  }
+
+  .box-orange {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  .box-red {
+    grid-column: 2 / 3;
+  }
+
+  .box-blue {
+    grid-column: 3 / 4;
+    grid-row: 1 / 3;
+    place-self: center;
+  }
+
+  img {
+    margin-top: 3.5em;
+  }
+}
